@@ -14,9 +14,9 @@ Meteor.call "spreadsheet/fetch","<spreadsheet key>"
 
 spreadsheetData = GASpreadsheet.findOne({spreadsheet:'<spreadsheet name or number>'})
 if  spreadsheetData
-for index,row of spreadsheetData.cells
-if ( row[1] ) then value = row[1].value
-...
+ for index,row of spreadsheetData.cells
+  if ( row[1] ) then value = row[1].value
+  ...
 ```	
 
 Or you could call on server:
