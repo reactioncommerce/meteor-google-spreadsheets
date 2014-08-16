@@ -6,7 +6,7 @@ Meteor.methods({
   'spreadsheet/fetch': function (key, worksheet, range, rowOneHeader) {
     if (!worksheet) worksheet = 0;
     if (!rowOneHeader) rowOneHeader = true;
-    GoogleSpreadsheets({
+    return GoogleSpreadsheets({
         key: key
     }, Meteor.bindEnvironment( function(err, spreadsheet) {
         spreadsheet.worksheets[worksheet].cells({
@@ -24,6 +24,5 @@ Meteor.methods({
     if (!worksheet) worksheet = 0;
     if (!rowOneHeader) rowOneHeader = true;
     //TODO update spreadsheet with collection updates
-
   }
 });
