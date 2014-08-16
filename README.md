@@ -3,15 +3,9 @@ meteor-google-spreadsheets
 
 Google Spreadsheets for Meteor
 
-See:
-
-https://github.com/samcday/node-google-spreadsheets
-
-https://github.com/Ajnasz/GoogleClientLogin
 
 
-
-
+##methods
 
 Client:
     
@@ -33,3 +27,19 @@ Or you could call on server:
 	       },50000);
 	    });
 	}
+	
+	
+## Exports
+
+```GoogleSpreadsheets```
+```GoogleClientLogin```
+
+See:
+
+https://github.com/samcday/node-google-spreadsheets
+
+https://github.com/Ajnasz/GoogleClientLogin
+
+
+## Collection
+Used as a cache for results ```GASpreadsheet```
