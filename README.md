@@ -9,7 +9,7 @@ Google Spreadsheets for Meteor
 
 Client:
 
- ```javascript   
+ ```coffeescript   
 Meteor.call "spreadsheet/fetch","<spreadsheet key>"
 
 spreadsheetData = GASpreadsheet.findOne({spreadsheet:'<spreadsheet name or number>'})
