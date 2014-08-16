@@ -1,0 +1,1 @@
+GASpreadsheet = new Meteor.Collection("ga_spreadsheet");

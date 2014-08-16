@@ -10,7 +10,11 @@ Npm.depends({
 });
 
 Package.on_use(function (api) {
+  api.imply(["underscore"], ["client", "server"]);
   api.export('GoogleSpreadsheets');
   api.export('GoogleClientLogin');
+  api.add_files('common/collections.js', ['client','server']);
+  api.add_files('server/methods.js', 'server');
+  api.add_files('server/publications.js', 'server');
   api.add_files('google-spreadsheets.js', 'server');
 });
