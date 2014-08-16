@@ -8,38 +8,41 @@ Google Spreadsheets for Meteor
 ##methods
 
 Client:
-    
-    Meteor.call "spreadsheet/fetch","<spreadsheet key>"
 
-    spreadsheetData = GASpreadsheet.findOne({spreadsheet:'<spreadsheet name or number>'})
-    if  spreadsheetData
-      for index,row of spreadsheetData.cells
-        if ( row[1] ) then value = row[1].value
-        ...
-	
+ ```javascript   
+Meteor.call "spreadsheet/fetch","<spreadsheet key>"
+
+spreadsheetData = GASpreadsheet.findOne({spreadsheet:'<spreadsheet name or number>'})
+if  spreadsheetData
+for index,row of spreadsheetData.cells
+if ( row[1] ) then value = row[1].value
+...
+```	
 
 Or you could call on server:
-	
-	if ( Meteor.is_server ) {
-	    Meteor.startup(function () {
-	       Meteor.setInterval(function() {
-	        Meteor.call('spreadsheet/fetch', key, worksheet, range, rowOneHeader)
-	       },50000);
-	    });
-	}
-	
-	
+
+```javascript	
+if ( Meteor.is_server ) {
+    Meteor.startup(function () {
+       Meteor.setInterval(function() {
+        Meteor.call('spreadsheet/fetch', key, worksheet, range, rowOneHeader)
+       },50000);
+    });
+}
+
+```	
 ## Exports
 
-```GoogleSpreadsheets```
-```GoogleClientLogin```
+`GoogleSpreadsheets`
+
+`GoogleClientLogin`
 
 See:
 
-https://github.com/samcday/node-google-spreadsheets
+[node-google-spreadsheets](https://github.com/samcday/node-google-spreadsheets)
 
-https://github.com/Ajnasz/GoogleClientLogin
+[GoogleClientLogin](https://github.com/Ajnasz/GoogleClientLogin)
 
 
 ## Collection
-Used as a cache for results ```GASpreadsheet```
+Used as a cache for results `GASpreadsheet`
