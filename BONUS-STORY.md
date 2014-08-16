@@ -21,7 +21,7 @@ You can preview the json output of your spreadsheet after publishing with:
 
 I fetched this with `Meteor.http.get` and created a template helper, and looped through the results to format into an object that my template uses.
 
-*client/view.html*
+*client/view.js*
 
 	Template.view.helpers
 	  spreadsheetData: () ->
