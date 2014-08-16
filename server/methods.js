@@ -12,7 +12,7 @@ Meteor.methods({
         spreadsheet.worksheets[worksheet].cells({
             range: range
         }, Meteor.bindEnvironment( function(err, cells) {
-          console.log("Upserting spreadsheet: ",spreadsheet.title)
+          //console.log("Upserting spreadsheet: ",spreadsheet.title)
           header = cells.cells[1];
           if (rowOneHeader == true) delete cells.cells[1];
           data = cells.cells;

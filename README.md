@@ -14,17 +14,22 @@ https://github.com/Ajnasz/GoogleClientLogin
 
 
 Client:
+    
+    Meteor.call "spreadsheet/fetch","<spreadsheet key>"
 
-	Meteor.subscribe("ga_spreadsheets");
-	
+    spreadsheetData = GASpreadsheet.findOne({spreadsheet:'<spreadsheet name or number>'})
+    if  spreadsheetData
+      for index,row of spreadsheetData.cells
+        if ( row[1] ) then value = row[1].value
+        ...
 	
 
-Server:
+Or you could call on server:
 	
 	if ( Meteor.is_server ) {
 	    Meteor.startup(function () {
 	       Meteor.setInterval(function() {
 	        Meteor.call('spreadsheet/fetch', key, worksheet, range, rowOneHeader)
-	       },5000);
+	       },50000);
 	    });
 	}
