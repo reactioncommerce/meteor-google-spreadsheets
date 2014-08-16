@@ -39,7 +39,7 @@ In this case each cell value is accessed with `item.gsx$<column header>.$t`
 
 This works pretty well, but there's usually a second or so delay before the result are rendered. To take care of this, I decided to fetch with a server side method `Meteor.call('spreadsheet/fetch',"<spreadsheet key>")` and insert the results into a collection `GASpreadsheet` and publish this to the client. 
 
-Now, instead of calling the directly using `Meteor.http.get` in the client view, you can do:
+Now, instead of calling the directly using `Meteor.http.get` in the client view helper, you can do:
 
 	 # fetches from a google docs spreadsheet, with cell data
 	 Meteor.call "spreadsheet/fetch","<spreadsheet key>"
@@ -51,7 +51,7 @@ Now, instead of calling the directly using `Meteor.http.get` in the client view,
 	   for index,row of spreadsheetData.cells
 	     if ( row[1] ) then feature = row[1].value
 
-This will first render the collection (cached copy), but will also update with the latest from the spreadsheet whenever a user views this page.
+This will first render the collection (cached copy), but will also update with the latest from the spreadsheet whenever a user views this page.  Cell data is accessed with `spreadsheet.cells.row[<column>].value` when using this method and collection.
 
 
 I've created a package that you can use at [ongoworks/meteor-google-spreadsheet](https://github.com/ongoworks/meteor-google-spreadsheets)
