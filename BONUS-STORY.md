@@ -39,7 +39,7 @@ In this case each cell value is accessed with `item.gsx$<column header>.$t`
 
 This works pretty well, but there's usually a second or so delay before the result are rendered. To take care of this, I decided to fetch with a server side method `Meteor.call('spreadsheet/fetch',"<spreadsheet key>")` and insert the results into a collection `GASpreadsheet` and publish this to the client. 
 
-Now, instead of calling the directly using `Meteor.http.get` in the client view helper, you can do:
+Now, instead of calling the Google Spreadsheet API directly using `Meteor.http.get` in the client view helper, you can do:
 
 	 # fetches from a google docs spreadsheet, with cell data
 	 Meteor.call "spreadsheet/fetch","<spreadsheet key>"
