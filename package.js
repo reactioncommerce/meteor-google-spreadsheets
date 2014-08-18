@@ -6,7 +6,8 @@ Package.describe({
 
 Npm.depends({
   "google-spreadsheets": "0.3.0",
-  "googleclientlogin": "0.2.8"
+  "googleclientlogin": "0.2.8",
+  "edit-google-spreadsheet": "0.2.6"
 });
 
 Package.on_use(function (api) {
