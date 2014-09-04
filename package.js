@@ -1,6 +1,6 @@
 Package.describe({
   summary: "Google Spreadsheets for Docker",
-  name: "ongoworks:google-spreadsheets"
+  name: "ongoworks:google-spreadsheets",
   version: "0.1.0",
   git: "https://github.com/ongoworks/meteor-google-spreadsheets"
 });
