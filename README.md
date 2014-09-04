@@ -3,6 +3,10 @@ meteor-google-spreadsheets
 
 Google Spreadsheets for Meteor
 
+```
+meteor add ongoworks:google-spreadsheets
+```
+
 ## Option 1
 
 Provides a way to pull a published, public google spreadsheet into a cache collection.
