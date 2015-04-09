@@ -1,14 +1,14 @@
 Package.describe({
-  summary: "Google Spreadsheets for Docker",
+  summary: "Google Spreadsheets",
   name: "ongoworks:google-spreadsheets",
-  version: "0.1.0",
+  version: "0.2.0",
   git: "https://github.com/ongoworks/meteor-google-spreadsheets"
 });
 
 Npm.depends({
-  "google-spreadsheets": "0.3.0",
+  "google-spreadsheets": "0.4.1",
   "googleclientlogin": "0.2.8",
-  "edit-google-spreadsheet": "0.2.6"
+  "edit-google-spreadsheet": "0.2.16"
 });
 
 Package.on_use(function (api) {
