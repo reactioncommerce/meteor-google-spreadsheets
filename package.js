@@ -14,6 +14,7 @@ Npm.depends({
 Package.on_use(function (api) {
   api.versionsFrom("METEOR@0.9.0");
   api.imply(["underscore"], ["client", "server"]);
+  api.use("check")
   api.export('GoogleSpreadsheets');
   api.export('GoogleClientLogin');
   api.export('GASpreadsheet');

@@ -13,6 +13,10 @@ Meteor.methods({
   // range = "R1C1:R5C5"
   // headerRow = 1-based index of row containing header, if there is a header
   'spreadsheet/fetch': function (key, worksheet, range, headerRow) {
+    check(key, String);
+    check(worksheet, Match.Optional(String))
+    check(range, Match.Optional(String))
+    check(headerRow, Match.Optional(Number))
     if (!worksheet) worksheet = 0;
     var fut = new Future(); //don't return until we're done importing
     GoogleSpreadsheets({
@@ -40,6 +44,9 @@ Meteor.methods({
     return fut.wait();
   },
   'spreadsheet/fetch2': function (spreadsheetName, worksheetId, options) {
+    check(spreadsheetName, String);
+    check(worksheetId, String);
+    check(options, Object);
     var fut = new Future(); //don't return until we're done exporting
 
     EditGoogleSpreadsheet.load({
@@ -68,6 +75,10 @@ Meteor.methods({
     return fut.wait();
   },
   'spreadsheet/update': function (spreadsheetName, worksheetId, updateObject, options) {
+    check(spreadsheetName, String);
+    check(worksheetId, String);
+    check(updateObject, Object);
+    check(options, Object);
     var fut = new Future(); //don't return until we're done exporting
 
     EditGoogleSpreadsheet.load({
