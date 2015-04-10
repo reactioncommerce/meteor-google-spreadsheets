@@ -17,9 +17,9 @@ Package.on_use(function (api) {
   api.export('GoogleSpreadsheets');
   api.export('GoogleClientLogin');
   api.export('GASpreadsheet');
-  api.add_files('client/subscriptions.js', 'client');
-  api.add_files('common/collections.js', ['client','server']);
-  api.add_files('server/methods.js', 'server');
-  api.add_files('server/publications.js', 'server');
-  api.add_files('google-spreadsheets.js', 'server');
+  api.addFiles('client/subscriptions.js', 'client');
+  api.addFiles('common/collections.js', ['client','server']);
+  api.addFiles('server/methods.js', 'server');
+  api.addFiles('server/publications.js', 'server');
+  api.addFiles('google-spreadsheets.js', 'server');
 });
