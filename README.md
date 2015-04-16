@@ -96,7 +96,7 @@ pullAllSteps: function () {
   var spreadsheetName = 'Steps'; // must match exactly the name you gave your Google spreadsheet
   var serviceEmail = '795073958503-qukpg8tt7vbsjqtufgc379ag24200fr3@developer.gserviceaccount.com'; // this is fake; replace with your own
 
-  var result = Meteor.call("spreadsheet/fetch2", spreadsheetName, 1, {email: serviceEmail});
+  var result = Meteor.call("spreadsheet/fetch2", spreadsheetName, "1", {email: serviceEmail});
 
   // Remove all existing
   Steps.remove({});
@@ -146,7 +146,7 @@ writeAllSteps: function () {
     row++;
   });
 
-  Meteor.call("spreadsheet/update", spreadsheetName, 1, obj, {email: serviceEmail});
+  Meteor.call("spreadsheet/update", spreadsheetName, "1", obj, {email: serviceEmail});
 }
 ```
 
