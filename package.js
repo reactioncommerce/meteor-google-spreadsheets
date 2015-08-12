@@ -1,14 +1,14 @@
 Package.describe({
   summary: "Google Spreadsheets",
   name: "ongoworks:google-spreadsheets",
-  version: "0.3.0",
+  version: "0.4.2",
   git: "https://github.com/ongoworks/meteor-google-spreadsheets"
 });
 
 Npm.depends({
-  "google-spreadsheets": "0.4.1",
+  "google-spreadsheets": "0.4.2",
   "googleclientlogin": "0.2.8",
-  "edit-google-spreadsheet": "0.2.16"
+  "edit-google-spreadsheet": "0.2.19"
 });
 
 Package.on_use(function (api) {
