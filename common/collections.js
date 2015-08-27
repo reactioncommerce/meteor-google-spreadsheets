@@ -1,1 +1,1 @@
-GASpreadsheet = new Meteor.Collection("ga_spreadsheet");
+GASpreadsheet = new Mongo.Collection("ga_spreadsheet");
