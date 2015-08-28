@@ -1,7 +1,7 @@
 Package.describe({
   summary: "Google Spreadsheets",
   name: "ongoworks:google-spreadsheets",
-  version: "0.4.2",
+  version: "0.4.2_2",
   git: "https://github.com/ongoworks/meteor-google-spreadsheets"
 });
 
@@ -15,7 +15,7 @@ Package.on_use(function (api) {
   api.versionsFrom("METEOR@0.9.0");
   api.imply(["underscore"], ["client", "server"]);
   api.use("check");
-  api.use("mongo");
+  api.use("mongo@1.1.0");
   api.export('GoogleSpreadsheets');
   api.export('GoogleClientLogin');
   api.export('GASpreadsheet');
