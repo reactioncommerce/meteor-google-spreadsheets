@@ -1,7 +1,7 @@
 Package.describe({
   summary: "Google Spreadsheets",
   name: "ongoworks:google-spreadsheets",
-  version: "0.4.2_3",
+  version: "0.4.2_4",
   git: "https://github.com/ongoworks/meteor-google-spreadsheets"
 });
 
