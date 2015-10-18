@@ -45,7 +45,7 @@ Meteor.methods({
   },
   'spreadsheet/fetch2': function (spreadsheetName, worksheetId, options) {
     check(spreadsheetName, String);
-    check(worksheetId, String);
+    check(worksheetId, Match.OneOf(String, Number));
     check(options, Object);
     var fut = new Future(); //don't return until we're done exporting
 
@@ -76,7 +76,7 @@ Meteor.methods({
   },
   'spreadsheet/update': function (spreadsheetName, worksheetId, updateObject, options) {
     check(spreadsheetName, String);
-    check(worksheetId, String);
+    check(worksheetId, Match.OneOf(String, Number));
     check(updateObject, Object);
     check(options, Object);
     var fut = new Future(); //don't return until we're done exporting
