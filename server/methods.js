@@ -49,15 +49,25 @@ Meteor.methods({
     check(options, Object);
     var fut = new Future(); //don't return until we're done exporting
 
-    EditGoogleSpreadsheet.load({
+    var loadOptions = {
       //debug: true,
-      spreadsheetName: spreadsheetName,
       worksheetId: worksheetId,
       oauth : {
         email: options.email,
         keyFile: pemFile
       }
-    }, function sheetReady(err, spreadsheet) {
+    }
+
+    // check type of spreadsheetName
+    if(options.isSpreadsheetId){
+      loadOptions.spreadsheetId = spreadsheetName;
+    }else{
+      loadOptions.spreadsheetName = spreadsheetName;
+    }
+
+    EditGoogleSpreadsheet.load(
+      loadOptions,
+      function sheetReady(err, spreadsheet) {
       if (err) {
         console.log(err);
         fut.return(false);
